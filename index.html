@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="pokedex, pokemon">
+  <meta name="robots" content="index, follow">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="/icons8-pokéball-48.png">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      pikachu 
+    </h1>
+  </header>
+
+  <div class="recherche">
+    <label for="">Saisir votre pokemon (anglais) :
+      <input type="text" class="searchPokemon" placeholder="Saisir votre pokemon (anglais)" list="pokemonList">
+      <datalist id="pokemonList"></datalist>
+    </label>
+    <button type="submit" class="modifier">Modifier le pokemon</button>
+  </div>
+
+  <main>
+
+    <section id="infos" class="flex">
+      <div class="w-50">
+        <div class="text-center">
+          <h2>Apparence Normal</h2>
+          <img class="w-100 object-fit-cover" src="" alt="apparenceNormal">
+        </div>
+
+        <!-- Container table Stats -->
+        <!--une stat avec des éléments <div> vides-->
+        <div class="stats">
+          <h3>Stats</h3>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>HP</div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>Attaque</div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>Défense</div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>Attaque spéciale</div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>Défense spéciale</div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>Vitesse</div>
+          </div>
+        </div>
+      </div>
+
+      <!--Container right -->
+      <div class="w-50">
+        <!-- Image shiny-->
+        <div class="apparence2">
+          <h2>Apparence shiny</h2>
+          <img src="" alt="ApparenceShiny" class="w-100 object-fit-cover shiny">
+        </div>
+
+        <!-- description -->
+        <p class="description">Il a une préférence pour les choses chaudes. Quand il pleut, on dit que de la vapeur
+          jaillit du bout de sa queue.</p>
+
+        <!-- specifications -->
+        <ul class="specifications">
+          <li>
+            <span>Taille</span>
+            <strong class="taille">4"</strong>
+          </li>
+          <li>
+            <span>Categorie</span>
+            <strong class="categorie">Pokémon Souris
+            </strong>
+          </li>
+          <li>
+            <span>Poids</span>
+            <strong id="specifications-weight">60 lbs</strong>
+          </li>
+          <li class="capacite">
+            <span>Capacité</span>
+
+          </li>
+          <li>
+            <span>Genre</span>
+            <strong>
+              <i class="bi bi-gender-female"></i>
+              <i class="bi bi-gender-male"></i>
+            </strong>
+          </li>
+        </ul>
+
+
+        <h3>Type</h3>
+        <ul class="type-list"></ul>
+        <h3>Faiblesses</h3>
+        <ul class="type-list"></ul>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,709 @@
+
+:root {
+  --margin-bottom: 2rem; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(desktop-1680x1050.jpg);
+  background-size: cover;
+  background-position: center ;
+  filter: opacity(0.8);
+}
+
+#infos img {
+  /* max-width: 40vw; */
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: var(--margin-bottom);
+}
+
+.description {
+  font-weight: bold;
+  font-size: larger;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Exo', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  background-color: #375eabb2;
+  border-radius: 30px;
+  border: solid #ffcc01e0 5px;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+h1 span {
+  color: #616161;
+}
+
+p {
+  margin-bottom: var(--margin-bottom);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.w-50 {
+  padding: 0.5rem;
+  width: calc(50% - 20px);
+}
+
+.w-100 {
+  width: 40%;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+ul.specifications {
+  background-color: gainsboro;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  list-style-position: inside;
+  border-radius: 8px;
+  gap: 0.7rem;
+  margin-bottom: var(--margin-bottom);
+}
+
+ul.specifications li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+ul.specifications li strong {
+  font-family: 'Exo', sans-serif;
+  font-weight: 500;
+}
+
+ul.specifications li span {
+  font-family: 'Exo', sans-serif;
+  color: white;
+  font-size: 0.9rem;
+}
+
+ul.type-list {
+  margin-bottom: var(--margin-bottom);
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.type-list li>* {
+  display: block;
+  min-width: 90px;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+
+ul.type-list1 {
+  margin-bottom: var(--margin-bottom);
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.type-list1 li>* {
+  display: block;
+  min-width: 90px;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+
+.bug {
+  background-color: #729f3f;
+  color: white;
+}
+
+.ice {
+  background-color: #51c4e7;
+  color: white;
+}
+
+.psychic {
+  background-color: #f366b9;
+  color: white;
+}
+
+.grass {
+  background-color: #9bcc50;
+  color: white;
+}
+
+.poison {
+  background-color: #b97fc9;
+  color: white;
+}
+
+.fire {
+  background-color: #fd7d24;
+  color: white;
+}
+
+.electric {
+  background-color: yellow;
+  color: black;
+}
+
+.flying {
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  color: white;
+}
+
+.water {
+  background-color: #4592c4;
+  color: white;
+}
+
+.normal {
+  background-color: black;
+  color: white;
+}
+
+.ground {
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  color: black;
+}
+
+.rock {
+  background-color: #a38c21;
+  color: white;
+}
+
+.stats {
+  background-color: #a4a4a4;
+  border-radius: 5px;
+  padding: 0.5rem;
+  max-width: 40vw;
+  margin: auto;
+}
+
+.stats h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.2rem;
+}
+
+.stats>div {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(15, 0.5rem) 1fr;
+  gap: 0.3rem 0;
+}
+
+.stats>div>div:not(:nth-of-type(16n)) {
+  background-color: #fff;
+  height: 0.5rem;
+  margin: 0.2rem 0.2rem;
+}
+
+.stats>div>div:nth-of-type(16n) {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: medium;
+}
+
+.stats.hp-1>div>div:nth-of-type(1n + 15):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-2>div>div:nth-of-type(1n + 14):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-3>div>div:nth-of-type(1n + 13):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-4>div>div:nth-of-type(1n + 12):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-5>div>div:nth-of-type(1n + 11):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-6>div>div:nth-of-type(1n + 10):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-7>div>div:nth-of-type(1n + 9):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-8>div>div:nth-of-type(1n + 8):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-9>div>div:nth-of-type(1n + 7):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-10>div>div:nth-of-type(1n + 6):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-11>div>div:nth-of-type(1n + 5):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-12>div>div:nth-of-type(1n + 4):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-13>div>div:nth-of-type(1n + 3):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-14>div>div:nth-of-type(1n + 2):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.hp-15>div>div:nth-of-type(1n + 1):not(:nth-of-type(1n+16)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-1>div>div:nth-of-type(1n + 31):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-2>div>div:nth-of-type(1n + 30):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-3>div>div:nth-of-type(1n + 29):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-4>div>div:nth-of-type(1n + 28):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-5>div>div:nth-of-type(1n + 27):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-6>div>div:nth-of-type(1n + 26):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-7>div>div:nth-of-type(1n + 25):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-8>div>div:nth-of-type(1n + 24):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-9>div>div:nth-of-type(1n + 23):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-10>div>div:nth-of-type(1n + 22):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-11>div>div:nth-of-type(1n + 21):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-12>div>div:nth-of-type(1n + 20):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-13>div>div:nth-of-type(1n + 19):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-14>div>div:nth-of-type(1n + 18):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.attack-15>div>div:nth-of-type(1n + 17):not(:nth-of-type(1n+32)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-1>div>div:nth-of-type(1n + 47):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-2>div>div:nth-of-type(1n + 46):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-3>div>div:nth-of-type(1n + 45):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-4>div>div:nth-of-type(1n + 44):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-5>div>div:nth-of-type(1n + 43):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-6>div>div:nth-of-type(1n + 42):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-7>div>div:nth-of-type(1n + 41):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-8>div>div:nth-of-type(1n + 40):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-9>div>div:nth-of-type(1n + 39):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-10>div>div:nth-of-type(1n + 38):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-11>div>div:nth-of-type(1n + 37):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-12>div>div:nth-of-type(1n + 36):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-13>div>div:nth-of-type(1n + 35):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-14>div>div:nth-of-type(1n + 34):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.defense-15>div>div:nth-of-type(1n + 33):not(:nth-of-type(1n+48)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-1>div>div:nth-of-type(1n + 63):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-2>div>div:nth-of-type(1n + 62):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-3>div>div:nth-of-type(1n + 61):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-4>div>div:nth-of-type(1n + 60):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-5>div>div:nth-of-type(1n + 59):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-6>div>div:nth-of-type(1n + 58):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-7>div>div:nth-of-type(1n + 57):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-8>div>div:nth-of-type(1n + 56):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-9>div>div:nth-of-type(1n + 55):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-10>div>div:nth-of-type(1n + 54):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-11>div>div:nth-of-type(1n + 53):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-12>div>div:nth-of-type(1n + 52):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-13>div>div:nth-of-type(1n + 51):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-14>div>div:nth-of-type(1n + 50):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-attack-15>div>div:nth-of-type(1n + 49):not(:nth-of-type(1n+64)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-1>div>div:nth-of-type(1n + 79):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-2>div>div:nth-of-type(1n + 78):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-3>div>div:nth-of-type(1n + 77):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-4>div>div:nth-of-type(1n + 76):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-5>div>div:nth-of-type(1n + 75):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-6>div>div:nth-of-type(1n + 74):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-7>div>div:nth-of-type(1n + 73):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-8>div>div:nth-of-type(1n + 72):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-9>div>div:nth-of-type(1n + 71):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-10>div>div:nth-of-type(1n + 70):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-11>div>div:nth-of-type(1n + 69):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-12>div>div:nth-of-type(1n + 68):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-13>div>div:nth-of-type(1n + 67):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-14>div>div:nth-of-type(1n + 66):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.special-defense-15>div>div:nth-of-type(1n + 65):not(:nth-of-type(1n+80)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-1>div>div:nth-of-type(1n + 95):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-2>div>div:nth-of-type(1n + 94):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-3>div>div:nth-of-type(1n + 93):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-4>div>div:nth-of-type(1n + 92):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-5>div>div:nth-of-type(1n + 91):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-6>div>div:nth-of-type(1n + 90):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-7>div>div:nth-of-type(1n + 89):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-8>div>div:nth-of-type(1n + 88):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-9>div>div:nth-of-type(1n + 87):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-10>div>div:nth-of-type(1n + 86):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-11>div>div:nth-of-type(1n + 85):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-12>div>div:nth-of-type(1n + 84):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-13>div>div:nth-of-type(1n + 83):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-14>div>div:nth-of-type(1n + 82):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+.stats.speed-15>div>div:nth-of-type(1n + 81):not(:nth-of-type(1n+96)) {
+  background-color: #30a7d7;
+}
+
+
+.apparence2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  border: black 2px solid;
+}
+
+.recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+  margin: auto;
+}
+
+.modifier {
+  background-color: whitesmoke;
+  color: black;
+  width: 30%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.modifier:hover {
+  cursor: pointer;
+  background-color: red;
+  color: #375dab;
+  font-size: medium;
+  font-weight: bold;
+  transition: all 0.5s ease;
+
+}
+
+.recherche input {
+  width: 30%;
+  margin: auto;
+  background-color: #ffcc01;
+  color: #375dab;
+  padding: 5px;
+  border: #375dab solid 0.3rem;
+  border-radius: 8px;
+}
+
+
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  margin-top: 8px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .flex>.w-50 {
+    width: 100%;
+  }
+
+  #evolution>div {
+    flex-direction: column;
+  }
+
+  #evolution>div> :not(.pokemon)::after {
+    content: "\F279";
+  }
+
+  #evolution .pokemon>button {
+    width: 100%;
+
+  }
+  .stats{
+    max-width: none;
+  }
+  .recherche input{
+    width: 80%;
+  }
+  .modifier{
+    width: auto;
+  }
+  .container {
+    flex-direction: row-reverse;
+  }
+  .description{
+    font-size:medium;
+  }
+  #info img{
+    width : 65%
+  }
+  .stats>div>div:nth-of-type(16n) {
+    font-size: small;
+  }
+}
